@@ -1,0 +1,70 @@
+.page-hero {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid var(--secondary-color);
+  display: flex;
+  align-items: center;
+  min-height: 350px;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 253, 210, 0.1) 0%, transparent 70%);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-hero h1 {
+  font-family: 'Annabel 1', serif;
+  font-size: 4.5rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  color: var(--header-gold);
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+
+.page-hero p {
+  font-size: 1.6rem;
+  color: var(--header-gold);
+  opacity: 0.9;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.hero-extras {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 60px 0;
+    min-height: 250px;
+  }
+
+  .page-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .page-hero p {
+    font-size: 1.1rem;
+  }
+}

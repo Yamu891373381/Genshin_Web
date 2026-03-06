@@ -1,0 +1,189 @@
+.quest-page {
+  min-height: calc(100vh - 70px);
+  background-color: var(--background-dark);
+}
+
+.quest-hero {
+  background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.quest-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.back-btn {
+  margin-top: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: white;
+  color: black;
+}
+
+.quest-content {
+  padding: 60px 0;
+}
+
+.quest-regions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.quest-region-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  border: 1px solid var(--secondary-color);
+}
+
+.quest-region-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--glow-color);
+}
+
+.quest-region-card:hover h3 {
+  color: var(--glow-color);
+}
+
+.q-card-image {
+  height: 180px;
+}
+
+.q-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.q-card-info {
+  padding: 1.5rem;
+}
+
+.q-card-info h3 {
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+
+.q-card-info p {
+  color: var(--text-primary);
+}
+
+.q-count {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+/* Child Grid */
+.quest-child-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.quest-child-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border: 1px solid var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+.quest-child-card:hover {
+  background-color: var(--hover-bg);
+  transform: translateY(-5px);
+  border-color: var(--glow-color);
+}
+
+.q-child-header {
+  padding: 1.25rem;
+  color: white;
+}
+
+.q-child-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.q-child-body {
+  padding: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.quest-child-card:hover .q-label,
+.quest-child-card:hover .q-value {
+  color: var(--primary-color);
+}
+
+.q-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.q-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.q-value {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-align: right;
+  max-width: 60%;
+}
+
+.q-price-tag {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #27ae60;
+  margin: 1.5rem 0 1rem;
+}
+
+.order-quest-btn {
+  width: 100%;
+  background: var(--secondary-color);
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: 2px solid var(--secondary-color);
+}
+
+.order-quest-btn:hover {
+  background: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.quest-child-card:hover .order-quest-btn {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.quest-child-card:hover .order-quest-btn:hover {
+  background: transparent;
+  color: var(--primary-color);
+}

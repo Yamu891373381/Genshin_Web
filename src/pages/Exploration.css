@@ -1,0 +1,230 @@
+/* Flip Card Container */
+.flip-regions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 3rem;
+  perspective: 1500px;
+}
+
+.flip-card {
+  height: 480px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(161, 194, 189, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Front Styling */
+.flip-card-front {
+  background: rgba(25, 24, 59, 0.8);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-box {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.v-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fffdd2;
+  padding: 5px 15px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  border: 1px solid rgba(255, 253, 210, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.card-info-box {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-info-box h3 {
+  font-size: 2rem;
+  color: #fffdd2;
+  margin-bottom: 1rem;
+}
+
+.card-info-box p {
+  color: #E7F2EF;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: auto;
+}
+
+.flip-hint-text {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--glow-color);
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+/* Back Styling */
+.flip-card-back {
+  background: linear-gradient(135deg, #19183B 0%, #2a2a5a 100%);
+  transform: rotateY(180deg);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-color: var(--glow-color);
+}
+
+.back-header h3 {
+  color: #fffdd2;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.back-header p {
+  color: var(--glow-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.pricing-grid {
+  margin: 2rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(161, 194, 189, 0.1);
+}
+
+.p-label {
+  color: #E7F2EF;
+  font-weight: 600;
+}
+
+.p-value {
+  color: #fffdd2;
+  font-weight: 800;
+}
+
+.card-cta {
+  background: var(--glow-color);
+  color: #19183B;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(161, 194, 189, 0.3);
+}
+
+.card-cta:hover {
+  transform: translateY(-3px);
+  background: #fffdd2;
+  box-shadow: 0 8px 20px rgba(161, 194, 189, 0.5);
+}
+
+/* Footer Section */
+.exploration-footer {
+  margin-top: 6rem;
+}
+
+.guide-card-premium {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  padding: 4rem;
+  border-radius: 40px;
+  border: 1px solid rgba(161, 194, 189, 0.1);
+}
+
+.guide-card-premium h2 {
+  text-align: center;
+  color: #fffdd2;
+  font-size: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.benefit {
+  text-align: center;
+}
+
+.b-icon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.benefit h4 {
+  color: var(--glow-color);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.benefit p {
+  color: #E7F2EF;
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .flip-regions-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .flip-card {
+    height: 450px;
+  }
+  .guide-card-premium {
+    padding: 2.5rem 1.5rem;
+  }
+}

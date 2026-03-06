@@ -1,0 +1,155 @@
+.endgame {
+  min-height: calc(100vh - 70px);
+  background-color: #0f1014;
+  color: white;
+}
+
+.endgame-hero {
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+  border-bottom: 2px solid var(--glow-color);
+}
+
+.endgame-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(161, 194, 189, 0.5);
+}
+
+.endgame-hero p {
+  font-size: 1.4rem;
+  color: var(--glow-color);
+  font-weight: 500;
+}
+
+.endgame-content {
+  padding: 80px 0;
+}
+
+.endgame-parent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.endgame-parent-card {
+  height: 450px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 1px solid var(--secondary-color);
+  transition: all 0.4s ease;
+}
+
+.endgame-parent-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--glow-color);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 15px rgba(161, 194, 189, 0.4);
+}
+
+.card-background {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.endgame-parent-card:hover .card-background img {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, transparent 20%, rgba(0,0,0,0.9));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.card-main-info {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.card-main-info h3 {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  font-weight: 700;
+}
+
+.card-hover-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem;
+  background: rgba(0, 0, 0, 0.95);
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+}
+
+.endgame-parent-card:hover .card-hover-info {
+  transform: translateY(0);
+}
+
+.endgame-parent-card:hover .card-main-info {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.card-hover-info p {
+  font-size: 1.1rem;
+  color: var(--border-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.book-service-btn {
+  background: var(--secondary-color);
+  color: white;
+  font-weight: 700;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--secondary-color);
+}
+
+.book-service-btn:hover {
+  background: transparent;
+  color: var(--glow-color);
+  border-color: var(--glow-color);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .endgame-hero h1 { font-size: 2.5rem; }
+  .endgame-parent-grid { grid-template-columns: 1fr; padding: 0 20px; }
+  .endgame-parent-card { height: 350px; }
+}
